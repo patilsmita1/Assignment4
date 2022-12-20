@@ -1,0 +1,79 @@
+<!-- <div class="box"[class.myclass]="mypro">class binding</div> -->
+
+<h3>Ngclass and Ngstyle</h3>
+<div class="box" [ngClass]="mltclasses">class binding</div>
+<br>
+
+<div class="box" [ngStyle]="mltStyle">class binding</div>
+
+<br>
+
+<h3> ngfor in Angular</h3>
+<table border="1">
+   <tr>
+    <td>Name</td>
+    <td>Age</td>
+    <td>Email</td>
+   </tr>
+   <tr *ngFor="let item of data">
+      <td>{{item.name}}</td>
+      <td>{{item.age}}</td>
+      <td>{{item.email}}</td>
+   </tr>
+</table>
+
+
+<br>
+<h3>ngswitch in Angular</h3>
+
+  <div class="container">
+    <div class="col-md-4">
+      <select class="from-control" (change)="setvalue($event)" >
+         <option value="">--Select--</option>
+         <option value="Laptop">Laptop</option>
+         <option value="Mobile">Mobile</option>
+        <option value="TV">TV</option>
+        <option value="Another">Another</option>
+      </select>
+    </div>
+  </div>  
+    
+    <div class="col-md-12" [ngSwitch]="selectedProduct">
+      <h4 class="text-success" *ngSwitchCase="'Laptop'">Laptop</h4>
+      <h4 class="text-success" *ngSwitchCase="'Mobile'">Mobile</h4>
+      <h4 class="text-success" *ngSwitch="'TV'">TV</h4>
+      <h4 class="text-success" *ngSwitchDefault>Default</h4>
+    </div>
+
+    <br>
+
+    <h3>String Interpolation in Angular</h3>
+    <br>
+
+<div>{{ "User" }} With ID {{ userId }} is {{ getUserStatus() }}</div>
+
+<br>
+<h3>Property binding</h3>
+
+<br>
+
+<input type="text" [disabled]="enable" name="" id="" [value]=" appStatus? Statuse1 : Statuse2">
+<br><br>
+<input type="text" [hidden]="false" name="" id="" bind-value="dynName">
+
+<br>
+
+<h3>Event binding in Angular</h3>
+<br>
+<!-- <button (click)="OnAddCart()">Add to Cart</button> -->
+<br><br>
+
+
+<!-- <input type="text" value="myinputtext" (click)="onInputClick($event)"> -->
+
+
+<button value="Laptop"(click)=OnAddCart($event)>Laptop</button>
+<button value="TV"(click)=OnAddCart($event)>TV</button>
+<button value="Washing Machine"(click)=OnAddCart($event)>Washing Machine</button>
+
+<p>{{msg}}</p>
