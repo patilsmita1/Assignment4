@@ -1,0 +1,27 @@
+<div class="container">
+<div class="row">
+    <div class="col-xs-12">
+        <p>home works!</p>  
+    </div>
+</div>
+</div>
+
+ <span class="setup">Given Number</span> 
+
+ <h1 class="punchline">{{data}}</h1> 
+
+ <button type="button" class="btn btn-success" (click)="add()" [disabled]='!isDisable'>Add number</button>
+
+ <button type="button" class="btn btn-danger" (click)="delete()">Clear Previous number</button>  
+
+ <br>
+
+
+ <label>Passing the data using event binding</label>
+
+ <br>
+ 
+ <input type="text" class="form-control" [(ngModel)]="name">
+ <br>
+ 
+ <p *ngIf="isDirective" [ngStyle]="{backgroundColor:getColor()}">{{name}}</p>
